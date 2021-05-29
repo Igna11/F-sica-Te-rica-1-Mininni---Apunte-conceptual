@@ -1,0 +1,84 @@
+\section*{Posible lista de temas y preguntas}
+\subsection*{Separación de variables}
+\begin{itemize}
+    \item \textbf{Separación de variables en cartesianas: Apéndice 9} Qué es lo que permite hacer separación de variables? Se necesita que la ecuación sea separable en el sistema de coordenadas dado y que el recinto sea un paralelepípedo en el recinto dado y tener condiciones de contorno triviales en al menos 2 direcciones (de las 3 direcciones posibles del espacio 3D)
+\end{itemize}
+
+\subsection*{Balance de energía}
+\begin{itemize}
+    \item \textbf{Balance de energía}: Apéndice 30.2\\
+        ¿Por qué se define $\textbf{B}\cdot\textbf{H} + \textbf{E}\cdot\textbf{D}$ como la energía electromagnética?\\
+        \indent \textit{Porque la energía magnetostática es $\textbf{B}\cdot \textbf{H}$ y la energía electrostática es $\textbf{E}\cdot\textbf{D}$, con lo cual la suma tiene que ser la densidad de energía electromagnética (la contribución de ambos campos)}\\
+        ¿A qué corresponde el vector de Poynting y por qué sólo aparece el flujo de S como variación de la energía?\\
+        \indent \textit{El vector de Poyting corresponde al flujo de energía electromagnética en una dada dirección, por unidad de tiempo y de área. Y si un recinto es cerrado, sólo puede haber variación de energía por el flujo de campo electromagnético que se escapa por las paredes del mismo, es por esto que la variación de la energía total interna de un sistema solo depende del flujo de energía que atraviesa las paredes.}
+
+    \item \textbf{Balance de impulso}\footnote{Saber demostrar las identidades vectoriales} Apéndice 31.4\\
+        Tensor de Maxwell - saber notación de índices\\
+        Teorema de conservación, qué se conserva y qué significado físico tiene la expresión de Maxwell?\\
+        \indent \textit{Si $T_{ij} = 0$, es decir, el tensor de Maxwell es nulo, entonces se conserva el impulso total, que es tanto impulso mecánico como impulso electromagnético. La expresión representa el balance entre la variación del impulso total y el flujo de impulso a través de las paredes de un recinto. El tensor de Maxwell $T_{ij}$ representa el flujo de impulso electromagnético con componente $i$-ésima que atraviesa la pared del recinto de normal $j$-ésima, por unidad de tiempo y de área.}\\
+        ¿En qué casos hay fuerza?\\
+        \indent \textit{Aparecen fuerzas en el caso electrostático, cuando no hay impulso electromagnético, dado que la integral del tensor queda igualada a la variación temporal de impulso mecánico, que por las leyes de Newton, corresponde a una fuerza. La integral de $T_{ij}$ representa los esfuerzos en un diferencial de volumen}
+        \subitem Cómo se añade la ley de Newton a la expresión y qué se pide?
+\end{itemize}
+
+\subsection*{Relatividad} 
+\begin{itemize}
+    \item \textbf{Formulación covariante del campo electromagnético} (desde la conservación de la carga en adelante)\\
+    ¿Cómo transforman $\rho$ y $J_{x}$? si tengo una $\rho$ en reposo en $S$, qué campos ve $S'$?\\
+    \textit{Transforman según las transformaciones de Lorentz: Para un boost en $x$ sería
+    \begin{equation*}
+        \begin{matrix}
+            c\rho' = \gamma(c\rho - \beta j_{x})\\
+            j'_{x} = \gamma(j_{x} - \beta c \rho)
+        \end{matrix}
+    \end{equation*}
+    Si hay una $\rho$ en reposo, significa que $j_{x} = 0$? entonces en ese caso, si bien no hay campo magnético en $S$ (porque no hay fuentes), sí habrá campo magnético en $S'$ porque $j'_{x} = -\gamma\beta c \rho$, es decir, hay fuentes}\\
+    ¿Cómo son $Q$ y $Q'$ y por qué? qué es lo que hacen que sean iguales. \\
+    \textit{Son iguales porque la carga es un invariante relativista (es un número)}\\
+    ¿Cómo transforma el volumen? (relacionado con la rta anterior)\\
+    \textit{El volumen se contrae, por la contracción espacial. Lo que hace que la densidad $\rho'$ que se ve en el sistema $S'$ sea mayor (misma cantidad de carga en volumen menor). Esto se puede ver con las cuentas:}
+    \begin{equation*}
+        \rho' = \gamma \rho,
+        \quad
+        \quad
+        dx' =  \frac{dx}{\gamma}
+    \end{equation*}
+    \textit{donde se ve que $\rho' > \rho$ ya que $\gamma > 1$. por otro lado, se ve que $dx' < dx$ (contracción espacial). Ahora quiero ver que}
+    \begin{equation*}
+        \int dV \rho = Q = Q' = \int dV' \rho'
+    \end{equation*}
+    \textit{y uso que $dV' = dx'\,dy'\,dz' = dx'\,dy\,dz = \frac{\gamma}{dx}dy\,dz = dV/\gamma$ y que $rho' = \gamma \rho$, entonces}
+    \begin{equation*}
+        Q' 
+        = \int dV' \rho' 
+        = \frac{1}{\gamma}\int dV \gamma\rho
+        = \int dV \rho 
+        = Q
+    \end{equation*}
+    Mirando los invariantes ($\textbf{E}\cdot\textbf{B}$ y $E^{2}-B^{2}$): ¿qué tiene que pasar para que se anule uno de los dos campos y cuál se puede anular?\\
+    \textit{Si supongo que en $S'$ se anula el campo $B'$, entonces el invariante $E'^{2} - B'^{2} > 0$. Y además, $\textbf{E}'\cdot \textbf{B}' = \textbf{E}\cdot \textbf{B} = 0$. Finalmente, tiene que pasar que en $S$, $E^{2} - B^{2} > 0 \Longrightarrow E^{2} > B^{2} $.\\
+    \indent En otro caso, si en $S'$ se anula el campo $E'$, entonces el invariante $E'^{2} - B'^{2} < 0$, con lo cual, en $S$ tiene que pasar que $E^{2} - B^{2} < 0 \Longrightarrow E^{2} < B^{2}$, y además los campos resultan ortogonales otra vez $\textbf{E}'\cdot \textbf{B}' = \textbf{E}\cdot \textbf{B} = 0$.\\
+    \indent Entonces, siempre que se anule algún campo en $S'$, necesariamente los campos son ortogonales en $S$ (wooooooooooooooooooooooh man)}
+\end{itemize}
+
+
+\subsection*{Potenciales de Landau - Wiechert}
+\begin{itemize}
+    \item Potenciales de Liénard - Wiechert
+    ¿Por qué el tiempo retardado es único?\\
+    \textit{Por que no existe otro tiempo que cumpla que la distancia recorrida por la onda electromagnética sea $|\textbf{r}-\textbf{r}_{0}(t')|$}\\
+    ¿Qué pasa cuando se derivan estos potenciales en función del tiempo?\\
+    \textit{Hay que tener cuidado al derivar respecto de $t$, ya que los potenciales hallados dependen de $t_{ret}$ que es una función de $t$, entonces no es trivial la derivación. Las magnitudes $\hat{n}$, $\beta$, $\gamma$ y $R$ están evaluadas en $t_{ret} = t'$, y la dependencia con $t$ venía dada por
+    \begin{equation*}
+        c(t - t') = |\textbf{r} - \textbf{r}_{0}(t')|
+    \end{equation*}
+    }
+    ¿Qué función se usa? deducirla usando la delta de Dirac (que tiene como argumento una función)\\
+    \textit{Acá se refiere a qué defino como la función $f(x)$ análoga a
+    \begin{equation*}
+    \delta(f(x)) = 
+    \frac{\delta(x - f^{-1}(0))}{|f'(f^{-1}(0))|}
+    \end{equation*}
+    y esa función es $f(t') = t' - t + |\textbf{r}-\textbf{r}_{0}(t')|/c$
+    }
+\end{itemize}

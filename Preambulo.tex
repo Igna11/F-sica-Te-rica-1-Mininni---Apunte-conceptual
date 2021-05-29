@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{anysize}
+\marginsize{2cm}{2cm}{2cm}{2cm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage{svg}
+\usepackage[hidelinks]{hyperref} %para agregar hiperlinks a las ecuaciones
+\usepackage{physics}
+\usepackage{qrcode}
+\usepackage{multicol}
+\usepackage{enumitem}
+\setlist{  
+  listparindent=\parindent,
+  parsep=0pt,
+}
+
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+\newcommand{\LaplaceSpherics}[1]{%20-03-2021 para escribir el laplaciano de una función en esféricas de forma rápida
+\frac{1}{r}\frac{\partial^{2}}{\partial r^{2}}
+    \left(
+        r#1
+    \right)
+    +
+    \frac{1}{r^{2}\sin{\theta}}
+    \frac{\partial}{\partial \theta}
+    \left(
+        \sin{(\theta)}
+        \frac{\partial #1}{\partial \theta}
+    \right)
+    +
+    \frac{1}{r^{2}\sin^{2}{(\theta)}}
+    \frac{\partial^{2} #1}{\partial \phi^{2}}}
+\usepackage{multicol}
+\title{Final Teo 1: Conceptos}
+\author{}
+%modificar date en base a las actualizaciones
+\date{2020}
